@@ -13,8 +13,15 @@
   "scripts": {
     "test": "node test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wapznw/nodejs_sdk_50r.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wapznw/nodejs_sdk_50r/issues"
+  },
   "author": "50R.CN 短网址",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "promise": "^7.1.1"
   }
