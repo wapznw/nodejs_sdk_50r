@@ -1,0 +1,21 @@
+{
+  "name": "url50r",
+  "version": "1.0.0",
+  "description": "http://50r.cn 短网址 node.js SDK",
+  "keywords": [
+    "短网址",
+    "50r.cn",
+    "网址缩短",
+    "短网址API",
+    "短网址接口"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "50R.CN 短网址",
+  "license": "ISC",
+  "dependencies": {
+    "promise": "^7.1.1"
+  }
+}
