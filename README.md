@@ -1,5 +1,7 @@
 ### 50R.CN 短网址 node.js SDK
 
+[![Build Status](https://travis-ci.org/wapznw/nodejs_sdk_50r.svg?branch=master)](https://travis-ci.org/wapznw/nodejs_sdk_50r)
+
 使用方法
 
 ```
