@@ -11,7 +11,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "mocha": "./node_modules/.bin/mocha -u bdd",
+    "cov": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,10 @@
   "license": "MIT",
   "dependencies": {
     "promise": "^5.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "coveralls": "^2.11.2",
+    "chai": "^2.3.0"
   }
 }
