@@ -1,4 +1,5 @@
 ### 50R.CN 短网址 node.js SDK
+
 ---
 
 [![NPM version](https://img.shields.io/npm/v/url50r.svg?style=flat)](https://www.npmjs.org/package/url50r)
@@ -30,6 +31,9 @@ url50r.convert(longUrl).then(function (shortUrl) {
 
 ```
 
-[详情请去官网查看](http://50r.cn)
+[在线运行](http://50r.cn/FIunNQ)
+
+---
+详情请去 [官网](http://50r.cn) 查看帮助。
 
 

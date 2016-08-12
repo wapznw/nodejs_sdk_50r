@@ -1,6 +1,6 @@
 {
   "name": "url50r",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "http://50r.cn 短网址 node.js SDK",
   "keywords": [
     "短网址",
