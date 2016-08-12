@@ -5,6 +5,24 @@
 var http = require('http');
 var url = require('url');
 var Promise = require('promise');
+var crypto = require('crypto');
+
+var __ = {};
+var _ = {
+    getCache: function (key) {
+        return __[key];
+    },
+    
+    setCache: function (key, value) {
+        __[key] = value;
+    },
+    
+    md5: function (str) {
+        var md5 = crypto.createHash('md5');
+        md5.update(str);
+        return md5.digest('hex');
+    }
+};
 
 var url50r = {
     ak: '',
@@ -18,18 +36,26 @@ var url50r = {
         var reqUrl = 'http://50r.cn/urls/add.json?' + ( this.ak ? 'ak=' + this.ak + '&' : '') + 'url=' + encodeURIComponent(url);
         
         return new Promise(function (resolve, reject) {
-            url50r.httpRequest(reqUrl).then(function (data) {
-                if(typeof data === 'string'){
-                    data = JSON.parse(data);
-                    if(data.error){
-                        reject(Error(data.error));
+            
+            var k = _.md5(reqUrl);
+            var result = _.getCache(k);
+            if(result){
+                resolve(result);
+            }else{
+                url50r.httpRequest(reqUrl).then(function (data) {
+                    if(typeof data === 'string'){
+                        data = JSON.parse(data);
+                        if(data.error){
+                            reject(Error(data.error));
+                        }else{
+                            _.setCache(k, data.url);
+                            resolve(data.url);
+                        }
                     }else{
-                        resolve(data.url);
+                        reject(Error(data));
                     }
-                }else{
-                    reject(Error(data));
-                }
-            }).catch(reject);
+                }).catch(reject);
+            }
         })
     },
     
