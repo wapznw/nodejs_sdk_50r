@@ -48,7 +48,7 @@ URL50R.prototype = {
 
     convert: function (url) {
         var self = this;
-        var reqUrl = (self.https ? 'https://50r.me' : 'http://50r.cn') + '/urls/add.json?' + ( this.ak ? 'ak=' + this.ak + '&' : '') + 'url=' + encodeURIComponent(url);
+        var reqUrl = (self.https ? 'https' : 'http') + '://50r.cn/urls/add.json?' + ( this.ak ? 'ak=' + this.ak + '&' : '') + 'url=' + encodeURIComponent(url);
         
         return new Promise(function (resolve, reject) {
 
