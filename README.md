@@ -1,7 +1,6 @@
 ### 50R.CN 短网址 node.js SDK
 
 [![Build Status](https://travis-ci.org/wapznw/nodejs_sdk_50r.svg?branch=master)](https://travis-ci.org/wapznw/nodejs_sdk_50r)
-
 [![Coverage Status](https://coveralls.io/repos/github/wapznw/nodejs_sdk_50r/badge.svg?branch=master)](https://coveralls.io/github/wapznw/nodejs_sdk_50r?branch=master)
 
 使用方法

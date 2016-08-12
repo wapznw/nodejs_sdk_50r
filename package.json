@@ -28,8 +28,9 @@
     "promise": "^5.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
+    "chai": "^2.3.0",
     "coveralls": "^2.11.2",
-    "chai": "^2.3.0"
+    "istanbul": "^0.4.4",
+    "mocha": "^2.2.5"
   }
 }
