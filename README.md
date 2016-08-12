@@ -13,12 +13,13 @@ npm install url50r --save
 
 ```javascript
 
-var url50r = require('url50r');
+var url50r = require('url50r')({
+    ak: '57ac3816d9cb467d121dd48f', // 替换成你自己的 App Key
+    https: true // 是否启用https
+});
 
-var ak = '57ac3816d9cb467d121dd48f'; // 替换成你自己的 App Key
 var longUrl = 'https://www.google.com.hk/search?q=hello';
 
-url50r.setAppKey(ak);
 url50r.convert(longUrl).then(function (shortUrl) {
     console.log(shortUrl);
 }).catch(function (err) {

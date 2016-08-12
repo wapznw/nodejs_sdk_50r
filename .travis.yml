@@ -1,10 +1,8 @@
 language: node_js
 repo_token: rFm8lYAcoEhxM6fdCw5jslLLPVKMQ9Vs4
 node_js:
-  - "6"
   - "6.1"
   - "5.11"
   - "0.12.7"
-  - "iojs"
 script: npm run mocha
 after_script: npm run cov
